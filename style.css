@@ -1,0 +1,652 @@
+/* Variables */
+
+:root {
+    /*  dark:
+        background - header & footer
+        text - quote 36px light italic,
+        text - information header 36px extra-bold,
+    */
+    --dark-color: #1F2937;
+
+
+    /*  light:
+        text - header main text 48px extra-bold,
+        text - header logo 24px, 
+    */
+    --light-color: #F9FAF8;
+
+
+    /*  medium:
+        text - header secondary, 
+        text - header link 18px,
+        background - quote section,
+    */
+    --medium-color: #bed2f5;
+    
+    --dark-medium-color: #646666;
+    
+
+    /*  accent: 
+        button color, 
+        call to action background color 
+    */
+    --accent-color: #3882F6;
+
+    /* strategies - quote - transparent background */
+    --dark-transparent: rgba(31, 30, 30, 0.575);
+
+}
+
+
+
+/* Responsive Design */
+
+@media(max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        padding-top: 2opx;
+        text-align: center;
+    }
+
+    .box .container {
+        display: block;
+        text-align: center;
+
+    }
+}
+
+
+
+/* General Style */
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background: var(--light-color);
+    /* my solution */
+    text-align: center;
+    
+}
+
+img {
+    width: 100%;
+}
+
+h1, h2, h3 {
+    margin-bottom: 16px; 
+    padding: 32px;
+
+}
+
+h2 {
+    font-size: 2em;
+    padding: 30px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto 20px;
+    padding: 0 32px;
+    display: flex;
+    justify-content: center; 
+}
+
+section {
+    padding: 50px 0 0;
+}
+
+a {
+    color: var(--dark-medium-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-color);
+    
+}
+
+button {
+    background: var(--accent-color);
+    color: var(--light-color);
+    /* border: none; */
+    border-radius: 5px;
+    padding: 4px 8px;
+    min-width: 150px;
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: none;
+} 
+
+button a {
+    color: var(--light-color);
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+/* Navbar */
+
+.navbar {
+    background: var(--dark-color);
+    color: var(--light-color);
+    height: 60px;
+    position: sticky;
+    top: 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    top: 0;
+    padding: 0 30px;
+}
+
+.navbar .logo {
+    font-weight: 1000;
+    font-size: 30px;
+    
+}
+
+.logo-1 {
+    color: var(--accent-color);
+    
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: var(--accent-color);
+    padding: .2em .5em;
+    border-radius: 3px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+
+/* Header */
+
+.header {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 60px 0 30px;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* my solution */
+    gap: 30px;
+    text-align: left;
+    
+    
+}
+
+.header h1 {
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1.1;
+    padding: 32px 0;
+
+}
+
+.header img,
+.header div {
+    /* my solution */
+    flex: 1;  
+}
+
+.header div {
+    min-width: 350px;
+}
+
+.header img {
+    /* my solution */
+    min-width: 350px;
+    height: auto;
+}
+
+.header p a {
+    color: var(--medium-color);
+    
+}
+
+.header p a:hover {
+    text-decoration: underline;
+}
+
+.header button:hover {
+    color: var(--accent-color);
+    background-color: var(--light-color);
+}
+
+
+
+/* Biodiversity Section */
+
+.dark-background {
+    margin: 16px;
+    padding: 16px;
+    background-color: var(--dark-medium-color);
+    color: var(--light-color)
+}
+
+.boxes h2,
+.boxes h3 {
+    text-align: center;
+}
+
+.boxes h2 {
+    padding-top: 30px;
+}
+
+div.container.birds {
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+figure.box.bird {
+    flex: 1;
+    margin: 20px 10px;
+    /* 
+    background: var(--light-color);
+    border-radius: 10px;
+    box-shadow: 0 3px 5px var(--dark-color);
+    padding: 15px 20px;
+    */
+}
+
+.box a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box i {
+    margin-right: 10px;
+}
+
+div.image {
+    border: 1px solid var(--dark-medium-color);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+}
+
+div.image:hover {
+    border: 2px solid var(--accent-color);
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+}
+
+.image img {
+    object-fit: cover;  
+}
+
+img.landscape {
+    width: auto;
+    height: 100%;
+}
+
+img.portrait {
+    width: 100%;
+    height: auto;
+}
+
+figcaption p {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 22px;
+}
+
+figcaption p:nth-child(1),
+figcaption :nth-child(2){
+    color: var(--dark-color);
+}
+
+.bird a :nth-child(2):hover {
+    color: var(--accent-color);
+} 
+
+
+
+.biodiversity-button {
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    margin: 0 0 50px;
+    border: none;
+}
+
+.biodiversity-button a {
+    color: var(--dark-color);
+}
+
+.biodiversity-button:hover,
+.biodiversity-button a:hover {
+    color: var(--accent-color);
+}
+
+
+
+/* Strategies Section */
+
+.strategies {
+    margin-top: 50px;
+    padding: 0;
+    text-align: center;
+    background: url('images/fundeni-lake-20220425_19214.jpg');
+}
+
+.strategies-header{
+    color: var(--light-color);
+    background-color: var(--dark-transparent);  
+}
+
+.strategies-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.strategies-header a {
+    color: var(--light-color)
+}
+
+.strategies-header a:hover {
+    text-decoration: underline;
+}
+
+.strategies h2 {
+    padding: 70px 0 0;
+    margin: 0;
+    text-shadow: 8px 8px .3em var(--dark-color),
+                 8px -8px .3em var(--dark-color),
+                 -8px 8px .3em var(--dark-color),
+                 -8px -8px .3em var(--dark-color);
+}
+
+.strategies-title>p,
+.strategies-title>p>a,
+.strategies figure {
+    font-size: 16px;
+    text-shadow: 4px 4px .3em var(--dark-color),
+                 4px -4px .3em var(--dark-color),
+                 -4px 4px .3em var(--dark-color),
+                 -4px -4px .3em var(--dark-color);
+}
+
+
+/* Strategies Quote */
+.quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    
+}
+
+.quote blockquote,
+.quote cite {
+    max-width: 700px;
+    margin: auto;
+}
+
+.quote blockquote {
+    text-align: left;
+    padding: 16px;
+}
+
+.quote cite a,
+.quote figcaption {
+    width: 100%;
+}
+
+
+
+
+/* Strategies Container & Items */
+
+.strategies .container {
+    
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
+    margin: 32px;
+    padding: 0 0 32px;
+}
+
+.strategies .box {
+    width: 400px;
+    margin: 32px;
+    padding: 24px 32px;
+    border: 1px solid var(--medium-color);
+    border-radius: 10px;
+    /* box-shadow: 10px 10px 10px lightgray; */
+    background-color: #f9faf8ab;
+    
+}
+
+.strategies .number {
+    color: var(--accent-color);
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.strategies .item {
+    padding: 24px 0;
+    font-weight: 700;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+.strategies .goal {
+    text-align: left;
+    text-decoration: underline;
+}
+
+.strategies ul {
+    padding-left: 20px;
+}
+
+.strategies li {
+    list-style-type: disc;
+}
+
+
+
+.strategy-button {
+    background-color: var(--dark-transparent);
+    margin: 20px;
+    border: none;
+}
+
+.strategey-button a {
+    color: var(--light-color);
+    
+}
+
+.strategy-button:hover,
+.strategy-button a:hover {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+
+}
+
+
+
+
+/* Action Section*/
+
+.action .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 50px;
+    color: var(--light-color);
+    background-color: var(--accent-color);
+    max-width: 800px;
+    margin:  32px auto;
+    padding: 32px 50px;
+    border-radius: 8px;
+}
+
+.action div {
+    text-align: left;
+}
+
+.action .action-header {
+    font-size: 1.7em;
+    font-weight: 700;
+}
+
+.action p {
+    margin-top: 10px;
+}
+
+.action button {
+    display: block;
+    border: 1px solid var(--light-color);
+    margin-bottom: 0;
+}
+
+.action button:hover {
+    background-color: var(--light-color);
+}
+
+
+
+
+/* Gallery Section*/
+
+.slide {
+    flex: 1;
+    height: 80vw;
+    margin: 0 1px;
+    border-radius: 8px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--light-color);
+  /*  position: relative; */
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+
+.slide h3 {
+    font-size: 20px;
+    position: absolute;
+    bottom: 16px;
+    opacity: 0;
+}
+
+.slide.active {
+   flex: 50;
+   height: 80vw;
+   width: auto;
+}
+
+.slide.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out 0.4s;
+}
+
+
+
+
+/* Location */
+
+.location {
+    margin-top: 30px;
+}
+
+.location .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}   
+
+
+
+/* References */
+
+.references .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+    
+}
+
+
+.references .box a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    margin-bottom: 32px;
+}
+
+.reference-logo {
+    display: flex;
+    align-items: center;
+    height: 120px;
+}
+
+.references img {
+    width: 150px;
+}
+
+
+
+
+
+
+
+/* Footer */
+
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 20px;
+}
+
