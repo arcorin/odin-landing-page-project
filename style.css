@@ -53,6 +53,10 @@
         text-align: center;
 
     }
+
+    .action .container {
+        flex-direction: column;
+    }
 }
 
 
